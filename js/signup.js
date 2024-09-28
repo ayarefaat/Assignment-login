@@ -7,6 +7,7 @@ var passInput=document.querySelector('form input[type="password"]');
 var signupBtn=document.querySelector('form button');
 var error=document.querySelector('div.signup span');
 var popup=document.querySelector('.box');
+var popupBtn=document.querySelector('.box button');
 
 var usersList= JSON.parse(localStorage.getItem("users"))||[];
 
@@ -98,3 +99,4 @@ function validate(regex,element){
 function dismiss(ev){
     popup.classList.remove('display-visible');
 }
+popupBtn.addEventListener('click',dismiss)
