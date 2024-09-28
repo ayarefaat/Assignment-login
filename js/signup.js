@@ -47,7 +47,7 @@ function signup(){
                 usersList.push(user)
                 localStorage.setItem('users',JSON.stringify(usersList));
                 clear();
-                window.location.href="../login.html"
+                window.location.href="../index.html"
             }
         }else{
             error.classList.replace('display-none','display');
