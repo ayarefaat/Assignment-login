@@ -19,21 +19,29 @@ function clear(){
     passInput.value="";
 }
 function login(){
-    console.log(usersList)
-    for(var i=0;i<usersList.length;i++){
-        if(usersList[i].email===emailInput.value && usersList[i].password===passInput.value){
-            console.log('login success');
-            console.log(usersList[i].name);
-            userLoginName=usersList[i].name;
-            sessionStorage.setItem('loginName',userLoginName);
-            error.innerHTML=``;
-            window.location.href="../pages/welcome.html";
-        }else{
-            console.log('err')
-            error.innerHTML=`Invalid email or Password`;
-            error.classList.replace('display-none' ,'display');
-            error.classList.add('red')
+    console.log(usersList.length)
+    if(usersList.length===0){
+        error.classList.replace('display-none',"display")
+        error.classList.add('red')
+        error.innerHTML="Please Signup first";
+        console.log('no usr')
+    }else{
+        for(var i=0;i<usersList.length;i++){
+            if(usersList[i].email===emailInput.value && usersList[i].password===passInput.value){
+                console.log('login success');
+                console.log(usersList[i].name);
+                userLoginName=usersList[i].name;
+                sessionStorage.setItem('loginName',userLoginName);
+                error.innerHTML=``;
+                window.location.href="../pages/welcome.html";
+            }else{
+                console.log('err')
+                error.innerHTML=`Invalid email or Password`;
+                error.classList.replace('display-none' ,'display');
+                error.classList.add('red')
+            }
         }
+
     }
 }
 loginBtn.addEventListener('click',login)

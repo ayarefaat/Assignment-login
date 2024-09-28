@@ -96,7 +96,7 @@ function validate(regex,element){
         return false;
     }
 }
-function dismiss(ev){
+function dismiss(){
     popup.classList.remove('display-visible');
 }
 popupBtn.addEventListener('click',dismiss)
