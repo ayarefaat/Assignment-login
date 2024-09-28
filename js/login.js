@@ -18,7 +18,6 @@ function clear(){
     nameInput.value="";
     passInput.value="";
 }
-
 function login(){
     console.log(usersList)
     for(var i=0;i<usersList.length;i++){
@@ -28,7 +27,7 @@ function login(){
             userLoginName=usersList[i].name;
             sessionStorage.setItem('loginName',userLoginName);
             error.innerHTML=``;
-            window.location.href="../welcome.html";
+            window.location.href="../pages/welcome.html";
         }else{
             console.log('err')
             error.innerHTML=`Invalid email or Password`;
