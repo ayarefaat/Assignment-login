@@ -1,0 +1,125 @@
+/* Global styling */
+:root{
+    --main-color:#24353f;
+    --sec-color:#17a2b8;
+    --titillium-font:"Titillium Web", sans-serif;
+}
+.display{
+    display: inline-block;
+}
+.user-display{
+    display: flex;
+}
+.display-none{
+    display: none;
+}
+.red{
+   color: #dc3545!important
+}
+.green{
+    color: #28a745!important;
+}
+.display-visible{
+    visibility: visible !important;
+}
+/* WelcomePage */
+nav{
+    background-color: var(--main-color) !important;
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.1);
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    button.logout{
+        color: rgba(255, 255, 255, 0.5) !important;
+        &:hover{
+            background-color: #ffc107;
+        }
+    }
+}
+section{
+    background-color: var(--main-color);
+    .login,.signup,.welcome{
+        background-color: #24353f;
+        box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+        h1{
+            color: var(--sec-color);
+            font-size: 2.5rem;
+            font-family: var(--titillium-font);
+        }
+        form{
+            .form-control{
+                background-color: transparent !important;
+                border-color: #ced4da;
+                color: #fff;
+                &::placeholder{
+                    color: #a8b6b6;
+                }
+                &:focus{
+                    box-shadow: none;
+                    border-color: #80bdff;
+                }
+            }
+            button{
+                border: 1px solid var(--sec-color) !important;
+                color: var(--sec-color);
+                transition: background-color 0.4s ease;
+                -webkit-transition: background-color 0.4s ease;
+                -moz-transition: background-color 0.4s ease;
+                -ms-transition: background-color 0.4s ease;
+                -o-transition: background-color 0.4s ease;
+                &:hover{
+                    background-color: var(--sec-color);
+                    color: #fff;
+                }
+            }
+            p{
+                a{
+                    &:hover{
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+    }
+    .box{
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        .content{
+           background-color: var(--main-color);
+           color: #fff;
+           width: fit-content;
+        span{
+            color: #75888b;
+           
+        }
+        p{
+            font-size: 1.3125rem;
+            font-family: var(--bree-font);
+            max-width: 450px;
+        }
+        ul{
+            li{
+                font-size: 18px;
+                font-family: var(--pt-sans-caption-font);
+                span{
+                    color: #17a2b8;
+                }
+            }
+        }
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: #0007;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    }
+}

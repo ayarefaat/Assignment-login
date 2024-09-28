@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="styles/all.min.css">
+    <!-- bootstrap -->
+     <link rel="stylesheet" href="styles/bootstrap.min.css">
+      <!-- font Titillium -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+     <!-- custom style -->
+      <link rel="stylesheet" href="styles/style.css">
+    <title>login</title>
+</head>
+<body>
+    <section class="min-vh-100">
+        <div class="container p-1">
+            <!-- start login -->
+            <div class="login m-auto mt-5 py-4 text-center w-75 flex-column">
+                <h1 class="mb-0">Smart Login System</h1>
+                <form action="" class="d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-md-10">
+                        <label for="email" class="form-label"></label>
+                        <input type="email" class="form-control rounded-1 p-2" id="email" placeholder="Enter your Email">
+                    </div>
+                    <div class="mb-3 col-md-10">
+                        <label for="password" class="form-label"></label>
+                        <input type="password" class="form-control rounded-1 p-2" id="password" placeholder="Enter your Password">
+                    </div>
+                    <span class="display-none">All inputs is required</span>
+                    <button class="btn col-md-10 mt-3" type="button"> Login</button>
+                    <p class="mt-2 text-white">Don’t have an account? <a href="/signup.html" class="text-white text-decoration-none">Sign Up</a></p>
+                </form>
+            </div>
+         
+            <!-- end login -->
+
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
