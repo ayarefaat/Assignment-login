@@ -6,7 +6,6 @@ console.log(logoutBtn)
 welcomeUser.innerHTML=sessionStorage.getItem('loginName');
 
 function logout(){
-    console.log('ss')
     window.location.href='../index.html'
 }
 logoutBtn.addEventListener('click',logout)
