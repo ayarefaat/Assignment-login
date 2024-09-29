@@ -8,16 +8,12 @@ var error=document.querySelector('div.login span');
 console.log(error)
 
 var userLoginName=""
+var check;
 
 var usersList= JSON.parse(localStorage.getItem("users"))||[];
 
 console.log(usersList);
 
-function clear(){
-    emailInput.value="";
-    nameInput.value="";
-    passInput.value="";
-}
 function login(){
     console.log(usersList.length)
     if(usersList.length===0){
@@ -32,13 +28,15 @@ function login(){
                 console.log(usersList[i].name);
                 userLoginName=usersList[i].name;
                 sessionStorage.setItem('loginName',userLoginName);
-                // error.classList.replace('display' ,'display-none');
+                check=true;
                 window.location.href="pages/welcome.html";
             }else{
-                console.log('err')
-                error.innerHTML=`Invalid email or Password`;
-                error.classList.replace('display-none' ,'display');
-                error.classList.add('red')
+                if(!check){
+                    console.log('err')
+                    error.innerHTML=`Invalid email or Password`;
+                    error.classList.replace('display-none' ,'display');
+                    error.classList.add('red')
+                }
             }
         }
 
