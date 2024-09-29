@@ -24,7 +24,7 @@ function login(){
         error.classList.replace('display-none',"display")
         error.classList.add('red')
         error.innerHTML="Please Signup first";
-        console.log('no usr')
+        console.log('no user')
     }else{
         for(var i=0;i<usersList.length;i++){
             if(usersList[i].email===emailInput.value && usersList[i].password===passInput.value){
