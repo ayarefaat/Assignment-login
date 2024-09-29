@@ -32,8 +32,8 @@ function login(){
                 console.log(usersList[i].name);
                 userLoginName=usersList[i].name;
                 sessionStorage.setItem('loginName',userLoginName);
-                error.innerHTML=``;
-                window.location.href="../pages/welcome.html";
+                // error.classList.replace('display' ,'display-none');
+                window.location.href="pages/welcome.html";
             }else{
                 console.log('err')
                 error.innerHTML=`Invalid email or Password`;
